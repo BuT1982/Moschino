@@ -1,0 +1,12 @@
+<aside id="recent-posts-2" class="widget widget_recent_entries">
+    <h4 class="widget-title">Recent Posts</h4>
+    <ul>
+        {% for post in posts %}
+
+            <li>
+                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+            </li>
+
+        {% endfor %}
+    </ul>
+</aside>

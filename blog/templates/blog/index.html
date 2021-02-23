@@ -19,9 +19,7 @@
                                 <h2 class="entry-title"><a href="{{ post.get_absolute_url }}"
                                                            rel="bookmark">{{ post.title }}</a>
                                 </h2>
-                                <a class='portfoliotype' href='portfolio-category.html'>summer</a>
-                                <a class='portfoliotype' href='portfolio-category.html'>woman</a>
-                                <a class='portfoliotype' href='portfolio-category.html'>yellow</a>
+                                <a class='portfoliotype' href='{{ post.category.get_absolute_url }}'>{{ post.category.title }}</a>
                             </header>
                         </article>
                     {% endfor %}

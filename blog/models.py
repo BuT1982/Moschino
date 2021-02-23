@@ -26,6 +26,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата публикации")
     category = models.ForeignKey(Category, max_length=150, on_delete=models.PROTECT, related_name='posts',
                                  verbose_name="Категория")
+    is_published = models.BooleanField(default=True, verbose_name='Черновик')
 
     def __str__(self):
         return self.title
